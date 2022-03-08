@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import Header from './components/Header';
+import Budget from './components/Budget';
+import AddBadget from './components/AddBadget';
+import MyInfos from './components/MyInfos';
+import * as S from './App.styles'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <S.GlobalContainer>
+      <Header />
+
+      <Routes>
+        <Route path='/' element={<Budget />}/>
+        <Route path='/add-badget' element={<AddBadget />}/>
+        <Route path='/my-infos' element={<MyInfos />}/>
+      </Routes>
+    </S.GlobalContainer>
   );
 }
 
