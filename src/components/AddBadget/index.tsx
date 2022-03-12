@@ -16,15 +16,15 @@ const AddBadget = () => {
                     </S.Content>
 
                     <S.Content>
-                        <p>Ateliê Jô Aragão</p>
+                        <p>Nome da empresa</p>
                         <p>CNPJ: 55.555.555/0001-05</p>
-                        <p>Rua Manoel Fernandes Barbosa Santos, n 12º</p>
+                        <p>Endereço principal da empresa</p>
                     </S.Content>
 
                     <S.Content>
-                        <p>(79)9 9154-3366</p>
-                        <p>ateliejoaragao@gmail.com</p>
-                        <p>Vendedor: Jomara </p>
+                        <p>(99)9 9999-9999</p>
+                        <p>email@email.com</p>
+                        <p>Vendedor: Nome Vendedor </p>
                     </S.Content>
                 </S.HeaderBudget>
 
