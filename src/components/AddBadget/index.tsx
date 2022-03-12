@@ -119,7 +119,38 @@ const AddBadget = () => {
                     </S.ContentBudget>
 
                     <S.ContentBudget>
-                        
+                        <S.TitlePayment>
+                            <span>DADOS DO PAGAMENTO</span>
+                        </S.TitlePayment>
+
+                        <S.FormGroupTable>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>VENCIMENTO</th>
+                                        <th>VALOR TOTAL</th>
+                                        <th>FORMA DE PAGAMENTO</th>
+                                        <th>OBSERVAÇÃO</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="text" placeholder="DD/MM/AAAA"/>
+                                        </td>
+                                        <td>
+                                            <input type="text" placeholder="EX.: 1250,00"/>
+                                        </td>
+                                        <td>
+                                            <input type="text" placeholder="EX.: Á VISTA"/>
+                                        </td>
+                                        <td>
+                                            <input type="text" placeholder="OPCIONAL"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </S.FormGroupTable>
                     </S.ContentBudget>
                 </S.BodyBudget>
 

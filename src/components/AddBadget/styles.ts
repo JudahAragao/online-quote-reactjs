@@ -133,6 +133,14 @@ export const ContentBudget = styled.div`
         height: 120px;
         display: flex;
         flex-direction: column;
+
+        input {
+            height: 30px;
+            background-color: #DBDBDB;
+            border-radius: 5px;
+            margin: 0;
+            padding: 0 10px;
+        }
     }
 
     input {
@@ -266,4 +274,40 @@ export const IconForServices = styled(FontAwesomeIcon)`
     font-size: 25px;
     color: #999999;
     margin: 0 0 0 10px;
+`
+
+export const TitlePayment = styled.div`
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid black;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+
+    span {
+        margin: 0 0 0 25px;
+    }
+`
+
+export const FormGroupTable = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    table {
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    tr {
+        height: 40px;
+    }
+
+    th {
+        border-bottom: 2px solid black;
+    }
+
+    tr, th, td {
+        text-align: center;
+    }
 `
