@@ -1,10 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 import * as S from './styles'
 
 const AddBadget = () => {
+
+    const [openTextArea, setOpenTextArea] = useState<Boolean>(false)
+    const [openProductField, setOpenProductField] = useState<Boolean>(false)
+    const [openServiceField, setOpenServiceField] = useState<Boolean>(false)
+
     return (
         <S.Container>
             <S.Badget>
@@ -37,19 +42,31 @@ const AddBadget = () => {
                         <S.DateOfIssue>
                             <p>DATA DE EMISSÃO: 30/10/2021</p>
                         </S.DateOfIssue>
-
                     </S.ContentBudget>
 
-                    <S.ContentBudget>
-                        <S.TextInfo>
-                            <h3>DESEJA ESCREVER UM TEXTO PARA A PROPOSTA?</h3>
-                            <p>Se sim clique na area cinza.</p>
-                        </S.TextInfo>
+                    {
+                        openTextArea === false
+                            ? <S.ContentBudget
+                                onClick={() => setOpenTextArea(!openTextArea)}
+                            >
+                                <S.TextInfo>
+                                    <h3>DESEJA ESCREVER UM TEXTO PARA A PROPOSTA?</h3>
+                                    <p>Se sim clique na area cinza.</p>
+                                </S.TextInfo>
 
-                        <S.IconPlus>
-                            <S.IconForText icon={faPlus} />
-                        </S.IconPlus>
-                    </S.ContentBudget>
+                                <S.IconPlus>
+                                    <S.IconForText icon={faPlus} />
+                                </S.IconPlus>
+                            </S.ContentBudget>
+
+                            : <S.ContentBudget>
+                                <span
+                                    onClick={() => setOpenTextArea(!openTextArea)}
+                                >X</span>
+                                <textarea placeholder="enter the proposal text" />
+                            </S.ContentBudget>
+
+                    }
 
                     <S.ContentBudget>
                         <span>PREVISÃO DE ENTREGA:</span>
@@ -108,15 +125,158 @@ const AddBadget = () => {
                         </S.ContentClient>
                     </S.ContentBudget>
 
-                    <S.ContentBudget>
-                        <span>ADICIONAR PRODUTOS</span>
-                        <S.IconForProduct icon={faPlus} />
-                    </S.ContentBudget>
+                    {
+                        openProductField === false
+                            ? <S.ContentBudget
+                                onClick={() => setOpenProductField(!openProductField)}
+                                openProductField={openProductField}
+                            >
+                                <span>ADICIONAR PRODUTOS</span>
+                                <S.IconForProduct icon={faPlus} />
+                            </S.ContentBudget>
 
-                    <S.ContentBudget>
-                        <span>ADICIONAR SERVIÇOS</span>
-                        <S.IconForServices icon={faPlus} />
-                    </S.ContentBudget>
+                            : <S.ContentBudget>
+                                <S.HeaderProduct>
+                                    <div>
+                                        <p>PRODUTOS</p>
+                                    </div>
+                                    <div
+                                        onClick={() => setOpenProductField(!openProductField)}
+                                    >
+                                        <p>CANCELAR</p>
+                                    </div>
+                                </S.HeaderProduct>
+
+                                <S.BodyProduct>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>ITEM</th>
+                                                <th>DESCRIÇÃO</th>
+                                                <th>OBSERVAÇÕES</th>
+                                                <th>VARIAÇÃO</th>
+                                                <th>QTDE</th>
+                                                <th>VAL. UN.</th>
+                                                <th>SUB TOTAL</th>
+                                                <th>AÇÃO</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>#</p>
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Name Product" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Observation" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Variation" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="The Amount" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Val. Un." />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Sub Total" />
+                                                </td>
+                                                <td>
+                                                    <p>Y</p>
+                                                    <p>N</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </S.BodyProduct>
+                                
+                                <S.FooterProduct>
+                                    <S.FinalValueItemsProduct>
+
+                                    </S.FinalValueItemsProduct>
+
+                                    <S.AddNewItem>
+                                        <span>ADICIONAR ITEM</span>
+                                        <S.IconForProduct icon={faPlus} />
+                                    </S.AddNewItem>
+                                </S.FooterProduct>
+                            </S.ContentBudget>
+                    }
+
+                    {
+                        openServiceField === false
+                            ? <S.ContentBudget
+                                onClick={() => setOpenServiceField(!openServiceField)}
+                                openServiceField={openServiceField}
+                            >
+                                <span>ADICIONAR SERVIÇOS</span>
+                                <S.IconForServices icon={faPlus} />
+                            </S.ContentBudget>
+
+                            : <S.ContentBudget>
+                                <S.HeaderService>
+                                    <div>
+                                        <p>PRODUTOS</p>
+                                    </div>
+                                    <div
+                                        onClick={() => setOpenServiceField(!openServiceField)}
+                                    >
+                                        <p>CANCELAR</p>
+                                    </div>
+                                </S.HeaderService>
+
+                                <S.BodyService>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>ITEM</th>
+                                                <th>DESCRIÇÃO</th>
+                                                <th>OBSERVAÇÕES</th>
+                                                <th>VARIAÇÃO</th>
+                                                <th>QTDE</th>
+                                                <th>VAL. UN.</th>
+                                                <th>SUB TOTAL</th>
+                                                <th>AÇÃO</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>#</p>
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Name Product" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Observation" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Variation" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="The Amount" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Val. Un." />
+                                                </td>
+                                                <td>
+                                                    <input type="text" placeholder="Sub Total" />
+                                                </td>
+                                                <td>
+                                                    <p>Y</p>
+                                                    <p>N</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </S.BodyService>
+                            </S.ContentBudget>
+                    }
+
+
 
                     <S.ContentBudget>
                         <S.TitlePayment>
@@ -136,16 +296,16 @@ const AddBadget = () => {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <input type="text" placeholder="DD/MM/AAAA"/>
+                                            <input type="text" placeholder="DD/MM/AAAA" />
                                         </td>
                                         <td>
-                                            <input type="text" placeholder="EX.: 1250,00"/>
+                                            <input type="text" placeholder="EX.: 1250,00" />
                                         </td>
                                         <td>
-                                            <input type="text" placeholder="EX.: Á VISTA"/>
+                                            <input type="text" placeholder="EX.: Á VISTA" />
                                         </td>
                                         <td>
-                                            <input type="text" placeholder="OPCIONAL"/>
+                                            <input type="text" placeholder="OPCIONAL" />
                                         </td>
                                     </tr>
                                 </tbody>
