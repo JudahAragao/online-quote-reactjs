@@ -132,11 +132,11 @@ const AddBadget = () => {
                                 openProductField={openProductField}
                             >
                                 <span>ADICIONAR PRODUTOS</span>
-                                <S.IconForProduct icon={faPlus} />
+                                <S.IconForProductAndService icon={faPlus} />
                             </S.ContentBudget>
 
                             : <S.ContentBudget>
-                                <S.HeaderProduct>
+                                <S.HeaderProductAndService>
                                     <div>
                                         <p>PRODUTOS</p>
                                     </div>
@@ -145,9 +145,9 @@ const AddBadget = () => {
                                     >
                                         <p>CANCELAR</p>
                                     </div>
-                                </S.HeaderProduct>
+                                </S.HeaderProductAndService>
 
-                                <S.BodyProduct>
+                                <S.BodyProductAndService>
                                     <table>
                                         <thead>
                                             <tr>
@@ -191,18 +191,23 @@ const AddBadget = () => {
                                             </tr>
                                         </tbody>
                                     </table>
-                                </S.BodyProduct>
+                                </S.BodyProductAndService>
                                 
-                                <S.FooterProduct>
-                                    <S.FinalValueItemsProduct>
+                                <S.FooterProductAndService>
+                                    <S.FinalValueItemsProductAndService>
+                                        <span>
+                                            <p>QTDE TOTAL: 600 un.</p>
+                                        </span>
+                                        <span>
+                                            <p>TOTAL PRODUTOS: R$ 2005,00</p>
+                                        </span>
+                                    </S.FinalValueItemsProductAndService>
 
-                                    </S.FinalValueItemsProduct>
-
-                                    <S.AddNewItem>
+                                    <S.AddNewItemProductAndService>
                                         <span>ADICIONAR ITEM</span>
-                                        <S.IconForProduct icon={faPlus} />
-                                    </S.AddNewItem>
-                                </S.FooterProduct>
+                                        <S.IconForProductAndService icon={faPlus} />
+                                    </S.AddNewItemProductAndService>
+                                </S.FooterProductAndService>
                             </S.ContentBudget>
                     }
 
@@ -213,11 +218,11 @@ const AddBadget = () => {
                                 openServiceField={openServiceField}
                             >
                                 <span>ADICIONAR SERVIÇOS</span>
-                                <S.IconForServices icon={faPlus} />
+                                <S.IconForProductAndService icon={faPlus} />
                             </S.ContentBudget>
 
                             : <S.ContentBudget>
-                                <S.HeaderService>
+                                <S.HeaderProductAndService>
                                     <div>
                                         <p>PRODUTOS</p>
                                     </div>
@@ -226,9 +231,9 @@ const AddBadget = () => {
                                     >
                                         <p>CANCELAR</p>
                                     </div>
-                                </S.HeaderService>
+                                </S.HeaderProductAndService>
 
-                                <S.BodyService>
+                                <S.BodyProductAndService>
                                     <table>
                                         <thead>
                                             <tr>
@@ -272,7 +277,23 @@ const AddBadget = () => {
                                             </tr>
                                         </tbody>
                                     </table>
-                                </S.BodyService>
+                                </S.BodyProductAndService>
+
+                                <S.FooterProductAndService>
+                                    <S.FinalValueItemsProductAndService>
+                                        <span>
+                                            <p>QTDE TOTAL: 600 un.</p>
+                                        </span>
+                                        <span>
+                                            <p>TOTAL PRODUTOS: R$ 2005,00</p>
+                                        </span>
+                                    </S.FinalValueItemsProductAndService>
+
+                                    <S.AddNewItemProductAndService>
+                                        <span>ADICIONAR ITEM</span>
+                                        <S.IconForProductAndService icon={faPlus} />
+                                    </S.AddNewItemProductAndService>
+                                </S.FooterProductAndService>
                             </S.ContentBudget>
                     }
 

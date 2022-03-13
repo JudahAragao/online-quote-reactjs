@@ -297,14 +297,14 @@ export const GroupInput = styled.div`
     }
 `
 
-// to the add products field
-export const IconForProduct = styled(FontAwesomeIcon)`
+// to the add products and services field
+export const IconForProductAndService = styled(FontAwesomeIcon)`
     font-size: 25px;
     color: #999999;
     margin: 0 0 0 10px;
 `
 
-export const HeaderProduct = styled.div`
+export const HeaderProductAndService = styled.div`
     width: 100%;
     height: 40px;
     display: flex;
@@ -327,7 +327,7 @@ export const HeaderProduct = styled.div`
     }
 `
 
-export const BodyProduct = styled.div`
+export const BodyProductAndService = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -372,19 +372,30 @@ export const BodyProduct = styled.div`
     }
 `
 
-export const FooterProduct = styled.div`
+export const FooterProductAndService = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
 `
 
-export const FinalValueItemsProduct = styled.div`
+export const FinalValueItemsProductAndService = styled.div`
     width: 100%;
     height: 40px;
     border-top: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    span {
+        margin: 0 25px 0 0;
+    }
+
+    p {
+        color: black;
+    }
 `
 
-export const AddNewItem = styled.div`
+export const AddNewItemProductAndService = styled.div`
     width: 100%;
     height: 40px;
     border-top: 2px solid black;
@@ -393,81 +404,6 @@ export const AddNewItem = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-`
-
-// to the add services field
-export const IconForServices = styled(FontAwesomeIcon)`
-    font-size: 25px;
-    color: #999999;
-    margin: 0 0 0 10px;
-`
-
-export const HeaderService = styled.div`
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid black;
-
-    div {
-        width: 100%;
-        display: flex;
-    }
-
-    div:nth-child(1) {
-        justify-content: flex-start;
-        margin: 0 0 0 25px;
-    }
-
-    div:nth-child(2) {
-        justify-content: flex-end;
-        margin: 0 25px 0 0;
-    }
-`
-
-export const BodyService = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    table {
-        width: 100%;
-        border-radius: 25px;
-    }
-
-    tr {
-        height: 40px;
-    }
-
-    th {
-        background-color: #ECECEC;
-    }
-
-    tr, th, td {
-        text-align: center;
-    }
-
-    th:nth-child(1), td:nth-child(8) {
-        padding: 0 25px;
-    }
-
-    td:nth-child(8) {
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        p {
-            margin: 5px;
-        }
-    }
-
-    input {
-        width: 85%;
-        height: 30px;
-        border-radius: 5px;
-        margin: 0;
-    }
 `
 
 // for customer data field
