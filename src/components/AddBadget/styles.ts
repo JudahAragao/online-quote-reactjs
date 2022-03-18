@@ -53,6 +53,18 @@ export const Content = styled.div`
     &:nth-child(3) {
         align-items: flex-end;
         margin: 0 25px 0 0;
+
+        span {
+            margin: 0 10px 0 0;
+        }
+    }
+
+    input {
+        border: none;
+        outline: 0;
+        color: black;
+        background-color: white;
+        font-weight: bold;
     }
 `
 
@@ -132,8 +144,8 @@ export const ContentBudget = styled.div<PropsContentBudget>`
         background-color: ${props => props.openProductField === false ? '#DBDBDB' : '#FFF'};
         display: flex;
         flex-direction: ${props => props.openProductField === false ? 'row' : 'column'};
-        justify-content:  ${props => props.openProductField === false ? 'center' : '' };
-        align-items: ${props => props.openProductField === false ? ' center' : '' };
+        justify-content:  ${props => props.openProductField === false ? 'center' : ''};
+        align-items: ${props => props.openProductField === false ? ' center' : ''};
 
         span {
             color: #999999;
@@ -150,8 +162,8 @@ export const ContentBudget = styled.div<PropsContentBudget>`
         background-color: ${props => props.openServiceField === false ? '#DBDBDB' : '#FFF'};
         display: flex;
         flex-direction: ${props => props.openServiceField === false ? 'row' : 'column'};
-        justify-content:  ${props => props.openServiceField === false ? 'center' : '' };
-        align-items: ${props => props.openServiceField === false ? ' center' : '' };
+        justify-content:  ${props => props.openServiceField === false ? 'center' : ''};
+        align-items: ${props => props.openServiceField === false ? ' center' : ''};
 
         span {
             color: #999999;
@@ -190,6 +202,12 @@ export const NumBudget = styled.div`
     display: flex;
     justify-content: flex-start;
     margin: 0 0 0 25px;
+
+    input {
+        width: 80px;
+        background-color: #DBDBDB;
+        padding: 0 0 0 10px;
+    }
 `
 
 export const DateOfIssue = styled.div`
@@ -197,6 +215,12 @@ export const DateOfIssue = styled.div`
     display: flex;
     justify-content: flex-end;
     margin: 0 25px 0 0;
+
+    input {
+        width: 100px;
+        color: black;
+        font-weight: bold;
+    }
 `
 
 // to the proposal text field
@@ -444,5 +468,51 @@ export const FormGroupTable = styled.div`
 
     input {
         width: 80%;
+    }
+`
+
+// Footer
+
+export const FooterBudget = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 5px 20px;
+        border: none;
+        color: white;
+        border-radius: 5px;
+    }
+`
+
+// Btns
+
+export const ButtonConfirm = styled.button`
+    margin: 20px auto 0 auto;
+    background-color: #23e665;
+
+    &:hover {
+        background-color: #35e872;
+    }
+`
+
+export const ButtonCancel = styled.button`
+    margin: 20px auto 0 auto;
+    background-color: #ef4848;
+
+    &:hover {
+        background-color: #f05656;
+    }
+`
+
+export const ButtonSave = styled.button`
+    margin: 20px auto 0 auto;
+    background-color: #5767fa;
+
+    &:hover {
+        background-color: #6a79fb;
     }
 `
