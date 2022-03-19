@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
-import { FormBudgetDataType } from "../../types/FormBudgetDataType"
+import { BudgetDataType } from "../../types/BudgetDataType"
 
 import * as S from './styles'
 const AddBadget = () => {
@@ -10,7 +10,7 @@ const AddBadget = () => {
     const [openProductField, setOpenProductField] = useState<Boolean>(false)
     const [openServiceField, setOpenServiceField] = useState<Boolean>(false)
 
-    const [data, setData] = useState<FormBudgetDataType>()
+    const [data, setData] = useState<BudgetDataType>()
     
 
     const handleChangeBudget = (event: any) => {

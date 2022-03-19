@@ -2,11 +2,11 @@ import React from "react"
 
 import * as S from './styles'
 
-import { MyInfosDataType } from "../../types/MyInfosDataType"
+import { CompanyDataType } from "../../types/CompanyDataType"
 
-type GetMyInfoResponse = { data: MyInfosDataType[] }
+type GetCompanyResponse = { data: CompanyDataType[] }
 
-const MyInfos = () => {
+const Company = () => {
     return (
         <S.Container>
             
@@ -14,4 +14,4 @@ const MyInfos = () => {
     )
 }
 
-export default MyInfos
+export default Company

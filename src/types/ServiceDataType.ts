@@ -1,8 +1,9 @@
 export type Service = {
+    serviceId: Number,
+    variationId: Number,
     serviceItem: Number,
     serviceDescription: String,
     serviceObs: String,
-    serviceVariation: String,
     serviceAmount: Number,
     serviceUnitPrice: Number,
     serviceSubtotal: Number,

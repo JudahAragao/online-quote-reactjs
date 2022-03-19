@@ -1,11 +1,6 @@
 export type Product = {
-    productItem: Number,
+    productId: Number,
+    variationId: Number,
     productDescription: String,
-    productObs: String,
-    productVariation: String,
-    productAmount: Number,
-    productUnitPrice: Number,
-    productSubtotal: Number,
-    productTotalItems: Number,
-    productTotalPrice: Number
+    productUnitPrice: Number
 }
